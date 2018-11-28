@@ -74,6 +74,7 @@
 				9991D91D21AEB26F007A43F6 /* Sources */,
 				9991D91E21AEB26F007A43F6 /* Frameworks */,
 				9991D91F21AEB26F007A43F6 /* Resources */,
+				99A2FAFB21AEC77E006B7185 /* Auto Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -129,6 +130,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		99A2FAFB21AEC77E006B7185 /* Auto Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Auto Increment Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")  \nbuildNumber=$(($buildNumber + 1))  \n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9991D91D21AEB26F007A43F6 /* Sources */ = {
